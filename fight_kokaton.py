@@ -179,6 +179,8 @@ def main():
         bird.update(key_lst, screen)
         # beam.update(screen)
         if bomb is not None:
+            bombs = [bomb for bomb in bombs if bomb is not None]  # Noneでないものリスト
+        for bomb in bombs:
             bomb.update(screen)
         if beam is not None:
             beam.update(screen)
